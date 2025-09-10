@@ -1,14 +1,20 @@
 {#
-| Variable         | Type       | Description                                                         |
-|------------------|------------|---------------------------------------------------------------------|
-| page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
+  | Variable     | Type   | Description
+  |--------------|--------|----------------------------
+  | page         | object |
+  | page.title   | string | +could be html
+  | page.slug    | string | ex: "cat.show"
 #}
+
 {% extends "layouts.master" %}
+
 {% block content %}
-    {% component home %}
+  {# الهيرو الخاص بنا #}
+  {% include 'components/home/hero.twig' %}
+
+  {# component home #}  {# ← أبقِ هذا السطر كما هو ليعرض عناصر البناء #}
 {% endblock %}
+
 {% block scripts %}
-    <script defer src="{{ 'home.js' | asset }}"></script>
+  <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}
