@@ -15,6 +15,7 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
+{% include 'components/home/hero.twig' %}
 <script>
 	window.showQuantity = {{landing.show_quantity ? 'true' : 'false'}}
 </script>
